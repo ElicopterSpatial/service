@@ -4,11 +4,11 @@ import org.springframework.data.annotation.Id;
 
 public class PlayerEntity {
     @Id
-    public String id;
+    private String id;
 
-    public String nume;
-    public String echipa;
-    public String pozitie;
+    private String nume;
+    private String echipa;
+    private String pozitie;
 
     public PlayerEntity() {}
 
@@ -18,10 +18,42 @@ public class PlayerEntity {
         this.pozitie = pozitie;
     }
 
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getNume() {
+        return nume;
+    }
+
+    public void setNume(String title) {
+        this.nume = title;
+    }
+
+    public String getEchipa() {
+        return echipa;
+    }
+
+    public void setEchipa(String echipa) {
+        this.echipa = echipa;
+    }
+
+    public String getPozitie() {
+        return pozitie;
+    }
+
+    public void setPozitie(String pozitie) {
+        this.pozitie = pozitie;
+    }
+
     @Override
     public String toString() {
         return String.format(
-                "Book[nume='%s', echipa='%s', pozitie='%s']",
+                "Player[nume='%s', echipa='%s', pozitie='%s']",
                 id, nume, echipa, pozitie);
     }
 }
